@@ -1,11 +1,11 @@
 import Foundation
 import Combine
 
-enum AdapterError: Error {
+public enum AdapterError: Error {
     case testError
 }
 
-protocol Client {
+public protocol Client {
     var connectionState: AnyPublisher<Bool, Never> { get }
 
     func connect() -> AnyPublisher<Void, AdapterError>
